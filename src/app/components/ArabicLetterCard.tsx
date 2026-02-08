@@ -44,7 +44,7 @@ export function ArabicLetterCard({
 
   const playSound = (e: React.MouseEvent) => {
     e.stopPropagation()
-    const utterance = new SpeechSynthesisUtterance(sound)
+    const utterance = new SpeechSynthesisUtterance(name)
     utterance.lang = 'ar-SA'
     utterance.rate = 0.6
     window.speechSynthesis.speak(utterance)
@@ -233,7 +233,7 @@ export function ArabicLetterCard({
                 ✨ أشكال حرف {name} ✨
               </motion.div>
 
-              <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-4 md:mt-6 overflow-hidden">
+              <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-4 md:mt-6 overflow-y-auto scrollbar-hide">
                 {/* Isolated Form */}
                 <motion.div
                   className="bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-5 flex flex-col items-center justify-center gap-3 shadow-lg border border-white/20"

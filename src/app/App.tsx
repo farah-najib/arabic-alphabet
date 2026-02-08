@@ -4,371 +4,479 @@ import { ArabicLetterCard } from '@/app/components/ArabicLetterCard';
 import { ChevronLeft, ChevronRight, Sparkles, Home } from 'lucide-react';
 
 const arabicLetters = [
-  { 
-    letter: 'ا', 
-    name: 'ألف', 
-    isolated: 'ا', 
-    initial: 'ا', 
-    medial: 'ـا', 
-    final: 'ـا', 
-    color: '#FF6B9D', 
-    emoji: '🦁', 
-    word: 'أسد', 
+  {
+    letter: 'أ',
+    name: 'ألف',
+    isolated: 'ا',
+    initial: 'ا',
+    medial: 'ـا',
+    final: 'ـا',
+    color: '#FF6B9D',
+    emoji: '🦁',
+    word: 'أ',
     sound: 'ألف - أسد',
-    examples: { initialExample: 'أسد', medialExample: 'فأر', finalExample: 'ماء' }
+    examples: {
+      initialExample: 'أسد',
+      medialExample: 'فأر',
+      finalExample: 'ماء'
+    }
   },
-  { 
-    letter: 'ب', 
-    name: 'باء', 
-    isolated: 'ب', 
-    initial: 'بـ', 
-    medial: 'ـبـ', 
-    final: 'ـب', 
-    color: '#4ECDC4', 
-    emoji: '🦆', 
-    word: 'بطة', 
+  {
+    letter: 'ب',
+    name: 'باء',
+    isolated: 'ب',
+    initial: 'بـ',
+    medial: 'ـبـ',
+    final: 'ـب',
+    color: '#4ECDC4',
+    emoji: '🦆',
+    word: 'بطة',
     sound: 'باء - بطة',
-    examples: { initialExample: 'بطة', medialExample: 'حبل', finalExample: 'كلب' }
+    examples: {
+      initialExample: 'بطة',
+      medialExample: 'حبل',
+      finalExample: 'كلب'
+    }
   },
-  { 
-    letter: 'ت', 
-    name: 'تاء', 
-    isolated: 'ت', 
-    initial: 'تـ', 
-    medial: 'ـتـ', 
-    final: 'ـت', 
-    color: '#FFA07A', 
-    emoji: '🍎', 
-    word: 'تفاح', 
+  {
+    letter: 'ت',
+    name: 'تاء',
+    isolated: 'ت',
+    initial: 'تـ',
+    medial: 'ـتـ',
+    final: 'ـت',
+    color: '#FFA07A',
+    emoji: '🍎',
+    word: 'تفاح',
     sound: 'تاء - تفاح',
-    examples: { initialExample: 'تفاح', medialExample: 'كتب', finalExample: 'بيت' }
+    examples: {
+      initialExample: 'تفاح',
+      medialExample: 'كتب',
+      finalExample: 'بيت'
+    }
   },
-  { 
-    letter: 'ث', 
-    name: 'ثاء', 
-    isolated: 'ث', 
-    initial: 'ثـ', 
-    medial: 'ـثـ', 
-    final: 'ـث', 
-    color: '#9B59B6', 
-    emoji: '🦊', 
-    word: 'ثعلب', 
+  {
+    letter: 'ث',
+    name: 'ثاء',
+    isolated: 'ث',
+    initial: 'ثـ',
+    medial: 'ـثـ',
+    final: 'ـسدث',
+    color: '#9B59B6',
+    emoji: '🦊',
+    word: 'ثعلب',
     sound: 'ثاء - ثعلب',
-    examples: { initialExample: 'ثعلب', medialExample: 'مثل', finalExample: 'حديث' }
+    examples: {
+      initialExample: 'ثعلب',
+      medialExample: 'مثل',
+      finalExample: 'حديث'
+    }
   },
-  { 
-    letter: 'ج', 
-    name: 'جيم', 
-    isolated: 'ج', 
-    initial: 'جـ', 
-    medial: 'ـجـ', 
-    final: 'ـج', 
-    color: '#FFD93D', 
-    emoji: '🐪', 
-    word: 'جمل', 
+  {
+    letter: 'ج',
+    name: 'جيم',
+    isolated: 'ج',
+    initial: 'جـ',
+    medial: 'ـجـ',
+    final: 'ـج',
+    color: '#FFD93D',
+    emoji: '🐪',
+    word: 'جمل',
     sound: 'جيم - جمل',
-    examples: { initialExample: 'جمل', medialExample: 'رجل', finalExample: 'دجاج' }
+    examples: {
+      initialExample: 'جمل',
+      medialExample: 'رجل',
+      finalExample: 'دجاج'
+    }
   },
-  { 
-    letter: 'ح', 
-    name: 'حاء', 
-    isolated: 'ح', 
-    initial: 'حـ', 
-    medial: 'ـحـ', 
-    final: 'ـح', 
-    color: '#6BCF7F', 
-    emoji: '🐴', 
-    word: 'حصان', 
+  {
+    letter: 'ح',
+    name: 'حاء',
+    isolated: 'ح',
+    initial: 'حـ',
+    medial: 'ـحـ',
+    final: 'ـح',
+    color: '#6BCF7F',
+    emoji: '🐴',
+    word: 'حصان',
     sound: 'حاء - حصان',
-    examples: { initialExample: 'حصان', medialExample: 'بحر', finalExample: 'صباح' }
+    examples: {
+      initialExample: 'حصان',
+      medialExample: 'بحر',
+      finalExample: 'صباح'
+    }
   },
-  { 
-    letter: 'خ', 
-    name: 'خاء', 
-    isolated: 'خ', 
-    initial: 'خـ', 
-    medial: 'ـخـ', 
-    final: 'ـخ', 
-    color: '#FF85A1', 
-    emoji: '🐑', 
-    word: 'خروف', 
+  {
+    letter: 'خ',
+    name: 'خاء',
+    isolated: 'خ',
+    initial: 'خـ',
+    medial: 'ـخـ',
+    final: 'ـخ',
+    color: '#FF85A1',
+    emoji: '🐑',
+    word: 'خروف',
     sound: 'خاء - خروف',
-    examples: { initialExample: 'خروف', medialExample: 'مخدة', finalExample: 'مطبخ' }
+    examples: {
+      initialExample: 'خروف',
+      medialExample: 'مخدة',
+      finalExample: 'مطبخ'
+    }
   },
-  { 
-    letter: 'د', 
-    name: 'دال', 
-    isolated: 'د', 
-    initial: 'د', 
-    medial: 'ـد', 
-    final: 'ـد', 
-    color: '#5DADE2', 
-    emoji: '🐔', 
-    word: 'دجاجة', 
+  {
+    letter: 'د',
+    name: 'دال',
+    isolated: 'د',
+    initial: 'د',
+    medial: 'ـد',
+    final: 'ـد',
+    color: '#5DADE2',
+    emoji: '🐔',
+    word: 'دجاجة',
     sound: 'دال - دجاجة',
-    examples: { initialExample: 'دجاج', medialExample: 'مدرسة', finalExample: 'أسد' }
+    examples: {
+      initialExample: 'دجاج',
+      medialExample: 'مدرسة',
+      finalExample: 'أسد'
+    }
   },
-  { 
-    letter: 'ذ', 
-    name: 'ذال', 
-    isolated: 'ذ', 
-    initial: 'ذ', 
-    medial: 'ـذ', 
-    final: 'ـذ', 
-    color: '#F8B500', 
-    emoji: '🐺', 
-    word: 'ذئب', 
+  {
+    letter: 'ذ',
+    name: 'ذال',
+    isolated: 'ذ',
+    initial: 'ذ',
+    medial: 'ـذ',
+    final: 'ـذ',
+    color: '#F8B500',
+    emoji: '🐺',
+    word: 'ذئب',
     sound: 'ذال - ذئب',
-    examples: { initialExample: 'ذئب', medialExample: 'أذن', finalExample: 'أستاذ' }
+    examples: {
+      initialExample: 'ذئب',
+      medialExample: 'أذن',
+      finalExample: 'أستاذ'
+    }
   },
-  { 
-    letter: 'ر', 
-    name: 'راء', 
-    isolated: 'ر', 
-    initial: 'ر', 
-    medial: 'ـر', 
-    final: 'ـر', 
-    color: '#E74C3C', 
-    emoji: '🌸', 
-    word: 'وردة', 
+  {
+    letter: 'ر',
+    name: 'راء',
+    isolated: 'ر',
+    initial: 'ر',
+    medial: 'ـر',
+    final: 'ـر',
+    color: '#E74C3C',
+    emoji: '🌸',
+    word: 'وردة',
     sound: 'راء - وردة',
-    examples: { initialExample: 'رمل', medialExample: 'فرح', finalExample: 'بحر' }
+    examples: {
+      initialExample: 'رمل',
+      medialExample: 'فرح',
+      finalExample: 'بحر'
+    }
   },
-  { 
-    letter: 'ز', 
-    name: 'زاي', 
-    isolated: 'ز', 
-    initial: 'ز', 
-    medial: 'ـز', 
-    final: 'ـز', 
-    color: '#3498DB', 
-    emoji: '🦒', 
-    word: 'زرافة', 
+  {
+    letter: 'ز',
+    name: 'زاي',
+    isolated: 'ز',
+    initial: 'ز',
+    medial: 'ـز',
+    final: 'ـز',
+    color: '#3498DB',
+    emoji: '🦒',
+    word: 'زرافة',
     sound: 'زاي - زرافة',
-    examples: { initialExample: 'زهرة', medialExample: 'غزال', finalExample: 'أرز' }
+    examples: {
+      initialExample: 'زهرة',
+      medialExample: 'غزال',
+      finalExample: 'أرز'
+    }
   },
-  { 
-    letter: 'س', 
-    name: 'سين', 
-    isolated: 'س', 
-    initial: 'سـ', 
-    medial: 'ـسـ', 
-    final: 'ـس', 
-    color: '#FF6B9D', 
-    emoji: '🐟', 
-    word: 'سمكة', 
+  {
+    letter: 'س',
+    name: 'سين',
+    isolated: 'س',
+    initial: 'سـ',
+    medial: 'ـسـ',
+    final: 'ـس',
+    color: '#FF6B9D',
+    emoji: '🐟',
+    word: 'سمكة',
     sound: 'سين - سمكة',
-    examples: { initialExample: 'سمك', medialExample: 'مسجد', finalExample: 'شمس' }
+    examples: {
+      initialExample: 'سمك',
+      medialExample: 'مسجد',
+      finalExample: 'شمس'
+    }
   },
-  { 
-    letter: 'ش', 
-    name: 'شين', 
-    isolated: 'ش', 
-    initial: 'شـ', 
-    medial: 'ـشـ', 
-    final: 'ـش', 
-    color: '#95E1D3', 
-    emoji: '☀️', 
-    word: 'شمس', 
+  {
+    letter: 'ش',
+    name: 'شين',
+    isolated: 'ش',
+    initial: 'شـ',
+    medial: 'ـشـ',
+    final: 'ـش',
+    color: '#95E1D3',
+    emoji: '☀️',
+    word: 'شمس',
     sound: 'شين - شمس',
-    examples: { initialExample: 'شجرة', medialExample: 'مشط', finalExample: 'عطش' }
+    examples: {
+      initialExample: 'شجرة',
+      medialExample: 'مشط',
+      finalExample: 'عطش'
+    }
   },
-  { 
-    letter: 'ص', 
-    name: 'صاد', 
-    isolated: 'ص', 
-    initial: 'صـ', 
-    medial: 'ـصـ', 
-    final: 'ـص', 
-    color: '#FDA7DF', 
-    emoji: '🐥', 
-    word: 'صوص', 
+  {
+    letter: 'ص',
+    name: 'صاد',
+    isolated: 'ص',
+    initial: 'صـ',
+    medial: 'ـصـ',
+    final: 'ـص',
+    color: '#FDA7DF',
+    emoji: '🐥',
+    word: 'صوص',
     sound: 'صاد - صوص',
-    examples: { initialExample: 'صقر', medialExample: 'فصل', finalExample: 'قميص' }
+    examples: {
+      initialExample: 'صقر',
+      medialExample: 'فصل',
+      finalExample: 'قميص'
+    }
   },
-  { 
-    letter: 'ض', 
-    name: 'ضاد', 
-    isolated: 'ض', 
-    initial: 'ضـ', 
-    medial: 'ـضـ', 
-    final: 'ـض', 
-    color: '#FFA500', 
-    emoji: '🐸', 
-    word: 'ضفدع', 
+  {
+    letter: 'ض',
+    name: 'ضاد',
+    isolated: 'ض',
+    initial: 'ضـ',
+    medial: 'ـضـ',
+    final: 'ـض',
+    color: '#FFA500',
+    emoji: '🐸',
+    word: 'ضفدع',
     sound: 'ضاد - ضفدع',
-    examples: { initialExample: 'ضفدع', medialExample: 'رضيع', finalExample: 'أرض' }
+    examples: {
+      initialExample: 'ضفدع',
+      medialExample: 'رضيع',
+      finalExample: 'أرض'
+    }
   },
-  { 
-    letter: 'ط', 
-    name: 'طاء', 
-    isolated: 'ط', 
-    initial: 'طـ', 
-    medial: 'ـطـ', 
-    final: 'ـط', 
-    color: '#C39BD3', 
-    emoji: '✈️', 
-    word: 'طائرة', 
+  {
+    letter: 'ط',
+    name: 'طاء',
+    isolated: 'ط',
+    initial: 'طـ',
+    medial: 'ـطـ',
+    final: 'ـط',
+    color: '#C39BD3',
+    emoji: '✈️',
+    word: 'طائرة',
     sound: 'طاء - طائرة',
-    examples: { initialExample: 'طائر', medialExample: 'مطر', finalExample: 'خط' }
+    examples: {
+      initialExample: 'طائر',
+      medialExample: 'مطر',
+      finalExample: 'خط'
+    }
   },
-  { 
-    letter: 'ظ', 
-    name: 'ظاء', 
-    isolated: 'ظ', 
-    initial: 'ظـ', 
-    medial: 'ـظـ', 
-    final: 'ـظ', 
-    color: '#F4A460', 
-    emoji: '🦌', 
-    word: 'ظبي', 
+  {
+    letter: 'ظ',
+    name: 'ظاء',
+    isolated: 'ظ',
+    initial: 'ظـ',
+    medial: 'ـظـ',
+    final: 'ـظ',
+    color: '#F4A460',
+    emoji: '🦌',
+    word: 'ظبي',
     sound: 'ظاء - ظبي',
     examples: { initialExample: 'ظل', medialExample: 'نظر', finalExample: 'حظ' }
   },
-  { 
-    letter: 'ع', 
-    name: 'عين', 
-    isolated: 'ع', 
-    initial: 'عـ', 
-    medial: 'ـعـ', 
-    final: 'ـع', 
-    color: '#48C9B0', 
-    emoji: '🐦', 
-    word: 'عصفور', 
+  {
+    letter: 'ع',
+    name: 'عين',
+    isolated: 'ع',
+    initial: 'عـ',
+    medial: 'ـعـ',
+    final: 'ـع',
+    color: '#48C9B0',
+    emoji: '🐦',
+    word: 'عصفور',
     sound: 'عين - عصفور',
-    examples: { initialExample: 'عصفور', medialExample: 'معلم', finalExample: 'جميع' }
+    examples: {
+      initialExample: 'عصفور',
+      medialExample: 'معلم',
+      finalExample: 'جميع'
+    }
   },
-  { 
-    letter: 'غ', 
-    name: 'غين', 
-    isolated: 'غ', 
-    initial: 'غـ', 
-    medial: 'ـغـ', 
-    final: 'ـغ', 
-    color: '#FF7675', 
-    emoji: '☁️', 
-    word: 'غيمة', 
+  {
+    letter: 'غ',
+    name: 'غين',
+    isolated: 'غ',
+    initial: 'غـ',
+    medial: 'ـغـ',
+    final: 'ـغ',
+    color: '#FF7675',
+    emoji: '☁️',
+    word: 'غيمة',
     sound: 'غين - غيمة',
-    examples: { initialExample: 'غراب', medialExample: 'بغداد', finalExample: 'فراغ' }
+    examples: {
+      initialExample: 'غراب',
+      medialExample: 'بغداد',
+      finalExample: 'فراغ'
+    }
   },
-  { 
-    letter: 'ف', 
-    name: 'فاء', 
-    isolated: 'ف', 
-    initial: 'فـ', 
-    medial: 'ـفـ', 
-    final: 'ـف', 
-    color: '#74B9FF', 
-    emoji: '🦋', 
-    word: 'فراشة', 
+  {
+    letter: 'ف',
+    name: 'فاء',
+    isolated: 'ف',
+    initial: 'فـ',
+    medial: 'ـفـ',
+    final: 'ـف',
+    color: '#74B9FF',
+    emoji: '🦋',
+    word: 'فراشة',
     sound: 'فاء - فراشة',
-    examples: { initialExample: 'فيل', medialExample: 'مفتاح', finalExample: 'صف' }
+    examples: {
+      initialExample: 'فيل',
+      medialExample: 'مفتاح',
+      finalExample: 'صف'
+    }
   },
-  { 
-    letter: 'ق', 
-    name: 'قاف', 
-    isolated: 'ق', 
-    initial: 'قـ', 
-    medial: 'ـقـ', 
-    final: 'ـق', 
-    color: '#A29BFE', 
-    emoji: '🐱', 
-    word: 'قطة', 
+  {
+    letter: 'ق',
+    name: 'قاف',
+    isolated: 'ق',
+    initial: 'قـ',
+    medial: 'ـقـ',
+    final: 'ـق',
+    color: '#A29BFE',
+    emoji: '🐱',
+    word: 'قطة',
     sound: 'قاف - قطة',
-    examples: { initialExample: 'قطة', medialExample: 'وقت', finalExample: 'طريق' }
+    examples: {
+      initialExample: 'قطة',
+      medialExample: 'وقت',
+      finalExample: 'طريق'
+    }
   },
-  { 
-    letter: 'ك', 
-    name: 'كاف', 
-    isolated: 'ك', 
-    initial: 'كـ', 
-    medial: 'ـكـ', 
-    final: 'ـك', 
-    color: '#FD79A8', 
-    emoji: '🐕', 
-    word: 'كلب', 
+  {
+    letter: 'ك',
+    name: 'كاف',
+    isolated: 'ك',
+    initial: 'كـ',
+    medial: 'ـكـ',
+    final: 'ـك',
+    color: '#FD79A8',
+    emoji: '🐕',
+    word: 'كلب',
     sound: 'كاف - كلب',
-    examples: { initialExample: 'كتاب', medialExample: 'مكتب', finalExample: 'سمك' }
+    examples: {
+      initialExample: 'كتاب',
+      medialExample: 'مكتب',
+      finalExample: 'سمك'
+    }
   },
-  { 
-    letter: 'ل', 
-    name: 'لام', 
-    isolated: 'ل', 
-    initial: 'لـ', 
-    medial: 'ـلـ', 
-    final: 'ـل', 
-    color: '#00B894', 
-    emoji: '🍋', 
-    word: 'ليمون', 
+  {
+    letter: 'ل',
+    name: 'لام',
+    isolated: 'ل',
+    initial: 'لـ',
+    medial: 'ـلـ',
+    final: 'ـل',
+    color: '#00B894',
+    emoji: '🍋',
+    word: 'ليمون',
     sound: 'لام - ليمون',
-    examples: { initialExample: 'ليمون', medialExample: 'ملعب', finalExample: 'جمل' }
+    examples: {
+      initialExample: 'ليمون',
+      medialExample: 'ملعب',
+      finalExample: 'جمل'
+    }
   },
-  { 
-    letter: 'م', 
-    name: 'ميم', 
-    isolated: 'م', 
-    initial: 'مـ', 
-    medial: 'ـمـ', 
-    final: 'ـم', 
-    color: '#E17055', 
-    emoji: '🍌', 
-    word: 'موز', 
+  {
+    letter: 'م',
+    name: 'ميم',
+    isolated: 'م',
+    initial: 'مـ',
+    medial: 'ـمـ',
+    final: 'ـم',
+    color: '#E17055',
+    emoji: '🍌',
+    word: 'موز',
     sound: 'ميم - موز',
-    examples: { initialExample: 'موز', medialExample: 'حمام', finalExample: 'قلم' }
+    examples: {
+      initialExample: 'موز',
+      medialExample: 'حمام',
+      finalExample: 'قلم'
+    }
   },
-  { 
-    letter: 'ن', 
-    name: 'نون', 
-    isolated: 'ن', 
-    initial: 'نـ', 
-    medial: 'ـنـ', 
-    final: 'ـن', 
-    color: '#FDCB6E', 
-    emoji: '🐝', 
-    word: 'نحلة', 
+  {
+    letter: 'ن',
+    name: 'نون',
+    isolated: 'ن',
+    initial: 'نـ',
+    medial: 'ـنـ',
+    final: 'ـن',
+    color: '#FDCB6E',
+    emoji: '🐝',
+    word: 'نحلة',
     sound: 'نون - نحلة',
-    examples: { initialExample: 'نحلة', medialExample: 'منزل', finalExample: 'حسن' }
+    examples: {
+      initialExample: 'نحلة',
+      medialExample: 'منزل',
+      finalExample: 'حسن'
+    }
   },
-  { 
-    letter: 'ه', 
-    name: 'هاء', 
-    isolated: 'ه', 
-    initial: 'هـ', 
-    medial: 'ـهـ', 
-    final: 'ـه', 
-    color: '#6C5CE7', 
-    emoji: '🌙', 
-    word: 'هلال', 
+  {
+    letter: 'ه',
+    name: 'هاء',
+    isolated: 'ه',
+    initial: 'هـ',
+    medial: 'ـهـ',
+    final: 'ـه',
+    color: '#6C5CE7',
+    emoji: '🌙',
+    word: 'هلال',
     sound: 'هاء - هلال',
-    examples: { initialExample: 'هلال', medialExample: 'فهد', finalExample: 'وجه' }
+    examples: {
+      initialExample: 'هلال',
+      medialExample: 'فهد',
+      finalExample: 'وجه'
+    }
   },
-  { 
-    letter: 'و', 
-    name: 'واو', 
-    isolated: 'و', 
-    initial: 'و', 
-    medial: 'ـو', 
-    final: 'ـو', 
-    color: '#55EFC4', 
-    emoji: '🌹', 
-    word: 'وردة', 
+  {
+    letter: 'و',
+    name: 'واو',
+    isolated: 'و',
+    initial: 'و',
+    medial: 'ـو',
+    final: 'ـو',
+    color: '#55EFC4',
+    emoji: '🌹',
+    word: 'وردة',
     sound: 'واو - وردة',
-    examples: { initialExample: 'وردة', medialExample: 'حوت', finalExample: 'نحو' }
+    examples: {
+      initialExample: 'وردة',
+      medialExample: 'حوت',
+      finalExample: 'نحو'
+    }
   },
-  { 
-    letter: 'ي', 
-    name: 'ياء', 
-    isolated: 'ي', 
-    initial: 'يـ', 
-    medial: 'ـيـ', 
-    final: 'ـي', 
-    color: '#FAB1A0', 
-    emoji: '✋', 
-    word: 'يد', 
+  {
+    letter: 'ي',
+    name: 'ياء',
+    isolated: 'ي',
+    initial: 'يـ',
+    medial: 'ـيـ',
+    final: 'ـي',
+    color: '#FAB1A0',
+    emoji: '✋',
+    word: 'يد',
     sound: 'ياء - يد',
-    examples: { initialExample: 'يد', medialExample: 'بيت', finalExample: 'علي' }
-  },
-];
+    examples: {
+      initialExample: 'يد',
+      medialExample: 'بيت',
+      finalExample: 'علي'
+    }
+  }
+]
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -416,7 +524,7 @@ export default function App() {
   };
 
   return (
-    <div 
+    <div
       className="h-screen w-full flex relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%)',
@@ -481,7 +589,7 @@ export default function App() {
             {currentIndex + 1} / {arabicLetters.length}
           </div>
         </div>
-        
+
         <div className="flex-1 overflow-y-auto scrollbar-hide px-2">
           <div className="flex flex-col gap-2">
             {arabicLetters.map((item, index) => (
@@ -493,13 +601,13 @@ export default function App() {
                     ? 'bg-yellow-400 text-purple-700 shadow-2xl scale-110'
                     : 'bg-white/40 text-white hover:bg-white/60 hover:scale-105'
                 }`}
-                style={{ 
+                style={{
                   fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
                   fontFamily: 'Tajawal, Arial, sans-serif'
                 }}
                 whileHover={{ scale: 1.15, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
-                animate={index === currentIndex ? { 
+                animate={index === currentIndex ? {
                   scale: [1.1, 1.15, 1.1],
                   boxShadow: [
                     '0 10px 30px rgba(0,0,0,0.3)',
@@ -525,7 +633,7 @@ export default function App() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 100 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-2 drop-shadow-2xl flex items-center justify-center gap-2 md:gap-4"
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -534,7 +642,7 @@ export default function App() {
             تعلم الحروف العربية!
             <Sparkles className="w-8 h-8 md:w-12 md:h-12 fill-yellow-300 text-yellow-300" />
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-base md:text-xl lg:text-2xl text-white/90 font-bold drop-shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
