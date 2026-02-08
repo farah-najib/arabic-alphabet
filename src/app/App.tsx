@@ -61,7 +61,7 @@ const arabicLetters = [
     isolated: 'ث',
     initial: 'ثـ',
     medial: 'ـثـ',
-    final: 'ـسدث',
+    final: 'ـث',
     color: '#9B59B6',
     emoji: '🦊',
     word: 'ثعلب',
