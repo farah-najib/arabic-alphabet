@@ -527,9 +527,10 @@ export default function App() {
     <div
       className="h-screen w-full flex relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%)',
+        background:
+          'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%)',
         backgroundSize: '400% 400%',
-        animation: 'gradientShift 15s ease infinite',
+        animation: 'gradientShift 15s ease infinite'
       }}
       dir="rtl"
     >
@@ -559,19 +560,34 @@ export default function App() {
             className="absolute text-2xl md:text-4xl opacity-20"
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
             }}
             animate={{
               y: [0, -30, 0],
-              rotate: [0, 10, 0],
+              rotate: [0, 10, 0]
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: Math.random() * 2
             }}
           >
-            {['⭐', '🌈', '🎈', '🎨', '🎪', '🦄', '✨', '🌟'][Math.floor(Math.random() * 8)]}
+            {
+              [
+                '⭐',
+                '✨',
+                '🌟',
+                '⭐',
+                '✨',
+                '🌟',
+                '⭐',
+                '✨',
+                '🌟',
+                '⭐',
+                '✨',
+                '🌟'
+              ][Math.floor(Math.random() * 8)]
+            }
           </motion.div>
         ))}
       </div>
@@ -584,7 +600,9 @@ export default function App() {
         transition={{ type: 'spring', stiffness: 100 }}
       >
         <div className="text-center mb-4 px-2">
-          <div className="text-white font-black text-lg md:text-2xl mb-1">الحروف</div>
+          <div className="text-white font-black text-lg md:text-2xl mb-1">
+            الحروف
+          </div>
           <div className="text-white/80 text-xs md:text-sm font-bold">
             {currentIndex + 1} / {arabicLetters.length}
           </div>
@@ -607,15 +625,23 @@ export default function App() {
                 }}
                 whileHover={{ scale: 1.15, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
-                animate={index === currentIndex ? {
-                  scale: [1.1, 1.15, 1.1],
-                  boxShadow: [
-                    '0 10px 30px rgba(0,0,0,0.3)',
-                    '0 15px 40px rgba(0,0,0,0.4)',
-                    '0 10px 30px rgba(0,0,0,0.3)'
-                  ]
-                } : {}}
-                transition={index === currentIndex ? { duration: 1.5, repeat: Infinity } : {}}
+                animate={
+                  index === currentIndex
+                    ? {
+                        scale: [1.1, 1.15, 1.1],
+                        boxShadow: [
+                          '0 10px 30px rgba(0,0,0,0.3)',
+                          '0 15px 40px rgba(0,0,0,0.4)',
+                          '0 10px 30px rgba(0,0,0,0.3)'
+                        ]
+                      }
+                    : {}
+                }
+                transition={
+                  index === currentIndex
+                    ? { duration: 1.5, repeat: Infinity }
+                    : {}
+                }
               >
                 {item.letter}
               </motion.button>
@@ -666,7 +692,7 @@ export default function App() {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.3 },
                 scale: { duration: 0.3 },
-                rotate: { duration: 0.3 },
+                rotate: { duration: 0.3 }
               }}
               className="absolute inset-0"
             >
@@ -709,5 +735,5 @@ export default function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
