@@ -6,14 +6,14 @@ import { ChevronLeft, ChevronRight, Sparkles, Home } from 'lucide-react';
 const arabicLetters = [
   {
     letter: 'أ',
-    name: 'ألف',
+    name: 'ا',
     isolated: 'ا',
     initial: 'ا',
     medial: 'ـا',
     final: 'ـا',
     color: '#FF6B9D',
     emoji: '🦁',
-    word: 'أ',
+    word: 'أسد',
     sound: 'ألف - أسد',
     examples: {
       initialExample: 'أسد',
