@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Chewy&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap');
+
+body {
+  font-family: 'Tajawal', 'Fredoka', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Tajawal', 'Chewy', 'Fredoka', cursive;
+}
+
+/* Arabic text styling */
+[dir="rtl"] {
+  font-family: 'Tajawal', 'Amiri', Arial, sans-serif;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4 {
+  font-family: 'Tajawal', 'Amiri', Arial, sans-serif;
+  font-weight: 800;
+}
